@@ -1,0 +1,836 @@
+@import url('https://fonts.googleapis.com/css2?family-Bebas+Neue&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/*Primero siempre hacer un RESET de estilos*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*--------- Header -----------*/
+header{
+    height: 100px;
+    background:#4D4D5C;
+    padding: 0 50px;
+    color:#fff;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    text-transform: uppercase;
+    color:#6cc091;
+    font-weight: 200;
+}
+
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #6cc091;
+}
+
+#check{
+    display: none;
+}
+/*----------- ASTA AQUI EL HEADER -----------------------------*/
+
+/* ---------------------- BANNER --------------------------*/
+#banner{
+    padding: 0 50px;
+    background: linear-gradient(
+        rgba(29,30,35,0.5),
+        rgba(29,30,35,0.5)
+    ),url(./img/img\ index/principal.jpg); /* ----- Aquí linkear la img de fondo --------*/
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner::before{
+    content:"";
+    background:rgba(77, 77, 92, 0.3);
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    left: 0;
+}
+#banner1{
+    padding: 0 50px;
+    background-image:url(./img/img\ home/Hilos.png); 
+    height: 50vh;
+    background-size:cover;
+    background-position:center center;
+}
+#banner2{
+    padding: 0 50px;
+    background-image:url(./img/img\ galery/Img11.jpg); 
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+}
+#banner3{
+    padding: 0 50px;
+    background: linear-gradient(
+        rgba(29,30,35,0.7),
+        rgba(29,30,35,0.7)
+    ),url(./img/img\ redes/Banner3.png); 
+    height: 50vh;
+    background-size:cover;
+    background-position:center;
+}
+
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-banner h3{
+    font-size: 35px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+.boton-empezar{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #6cc091;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+.boton-empezar:hover{
+    background: #6cc09070;
+}
+/* ------------ Asta aqui el BANNER ---------------------*/
+
+/* ------------ PERSONAS ---------------------*/
+#personas{
+    background-color: #4bae77;
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#personas img{
+    border-radius: 100%;
+    width: 60%;
+    height: auto;
+}
+#personas div{
+    padding: 30px 30px;
+}
+#personas div h4{
+    color: #fff;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+#personas div p{
+    color: #fff;
+    font-size: 18px;
+}
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: #6cc091;
+    padding: 10px 30px;
+    border: 3px solid #6cc091;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+.boton-saber-mas:hover{
+    background: #6cc091;
+    color: #fff;
+}
+/* ------------ Asta aqui el PERSONAS ---------------------*/
+
+/* ------------ ICONOS ---------------------*/
+#iconos{
+    padding: 0 50px;
+    background: rgba(78, 78, 93, 0.5);
+}
+.contenido-iconos{
+    padding: 50px 50px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.contenido-iconos div{
+    flex: 1;
+    margin: 20px 0px;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+#icono-mobile{
+    border: none;
+}
+.contenido-iconos div i{
+    color:#4D4D5C;
+}
+.contenido-iconos div h6{
+    color:#4bae77;
+    font-size: 20px;
+    font-weight: 100;
+    margin: 10px 0px;
+}
+.contenido-iconos div p{
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 17px;
+    text-align: justify;
+    padding: 10px;
+}
+.boton-iconos{
+    text-align: center;
+    padding-bottom: 50px;
+}
+/* ------------ Asta aqui ICONOS ---------------------*/
+
+/* ------------ FORMULARIO  ---------------------*/
+#contacto{
+    background: #4bae77;
+    padding: 50px 0px;
+    color:#fff;
+}
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+#contacto form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.datos-form{
+    display:inline-flex;
+}
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    background: #6cc091;
+    border-radius: 10px;
+    border: 2px solid #8dcaa9;
+    padding:10px 5px;
+    outline: 0;
+    color: #fff;
+    width: 100%;
+}
+form input:focus,
+form textarea:focus{
+    border-color: #4bae77;
+    box-shadow: 0 0 0 1px #4bae77;
+}
+form input::placeholder,
+form textarea::placeholder{
+    color:#fff
+}
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.boton-formulario .boton-saber-mas{
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    transition: 0.4s;
+}
+.boton-formulario .boton-saber-mas:hover{
+    background: #085f2fad;
+}
+/* --------------- Asta aquí el FORMULARIO  ---------------------*/
+
+/* --------------------- FOOTER ------------------------*/
+footer{
+    display: flex;
+    justify-content:space-around;
+    background:#4D4D5C;
+    color: #cccccc4a;
+    text-align: center;
+    padding: 10px 0px;
+    clear: both;
+    font-size: 20px;
+}
+.footLAD{
+    text-decoration: none;
+    color: #25252a;
+}
+/* ------------ Asta aqui FOOTER ---------------------*/
+
+/* ------------ NOSOTROS ---------------------*/
+#nosotros .container{
+    background-color:#6cc091;
+    text-align: center;
+    padding: 90px 12px;
+    display: flex;
+    justify-content:space-evenly;
+}
+#nosotros .texto{
+    font-size: 25px;
+    color: #fff;
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+#nosotros h2{
+    font-size: 45px;
+    margin-top: 0px ;
+}
+#nosotros .img-container{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(./img/img\ home/fede.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 400px;
+    border-radius: 10px;
+}
+/* -----------------------------------------------------*/
+#nosotros1 .contenedor{
+    background-color:#707d76;
+    text-align: center;
+    padding: 90px 12px;
+    display: flex;
+    justify-content:space-evenly;
+}
+#nosotros1 .texto{
+    font-size: 25px;
+    color: #fff;
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+#nosotros1 h2{
+    font-size: 45px;
+    margin-top: 0px ;
+}
+#nosotros1 .img-contenedor{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(./img/img\ home/Afuera.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 400px;
+    border-radius: 10px;
+}
+/* -----------------------------------------------------*/
+#nosotros2 .contenedor{
+    background-color:#6cc091;
+    text-align: center;
+    padding: 90px 12px;
+    display: flex;
+    justify-content:space-evenly;
+}
+#nosotros2 .texto{
+    font-size: 25px;
+    color: #fff;
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 30px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+}
+#nosotros2 h2{
+    font-size: 45px;
+    margin-top: 0px ;
+}
+#nosotros2 .img-contenedor{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ), url(./img/img\ home/sillon.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    width: 400px;
+    border-radius: 10px;
+}
+/* ------------ asta aquí NOSOTROS---------------------*/
+/* ------------ GALERIA---------------------*/
+#slider-telas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(140deg, #4bae77, #fff);
+}
+.conteiner{
+    position: relative;
+    width:960px;
+    height: 540px;
+}
+        /* --- img ---*/
+.conteiner .img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.conteiner .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    border-radius: 20px;
+    transition: all .7s;
+}
+.img p{
+    text-transform: uppercase;
+    background: linear-gradient(140deg,#31dd8470, #a85798);
+    font-weight: 200;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+/* --- Efecto - img ---*/
+
+#uno:checked ~ .img1 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#dos:checked ~ .img1 img,
+#dos:checked ~ .img2 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#tres:checked ~ .img1 img,
+#tres:checked ~ .img2 img,
+#tres:checked ~ .img3 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#cuatro:checked ~ .img1 img,
+#cuatro:checked ~ .img2 img,
+#cuatro:checked ~ .img3 img,
+#cuatro:checked ~ .img4 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#cinco:checked ~ .img1 img,
+#cinco:checked ~ .img2 img,
+#cinco:checked ~ .img3 img,
+#cinco:checked ~ .img4 img,
+#cinco:checked ~ .img5 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#seis:checked ~ .img1 img,
+#seis:checked ~ .img2 img,
+#seis:checked ~ .img3 img,
+#seis:checked ~ .img4 img,
+#seis:checked ~ .img5 img,
+#seis:checked ~ .img6 img{
+    clip-path: circle(150% at 0% 100%);
+}
+        /* --- Labels---*/
+.conteiner .sliders{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform:translateX(-50%);
+    z-index: 99;
+    display: flex;
+}
+.conteiner .sliders label{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#uno:checked ~ .sliders label.uno,
+#dos:checked ~ .sliders label.dos,
+#tres:checked ~ .sliders label.tres,
+#cuatro:checked ~ .sliders label.cuatro,
+#cinco:checked ~ .sliders label.cinco,
+#seis:checked ~ .sliders label.seis{
+    width: 35px;
+    border-radius: 14px;
+    background: #fff ;
+}
+
+.sliders label:hover{
+    background: #fff
+}
+
+input[type="radio"]{
+    display: none;
+}
+/*----------- asta aqui primera seccion ------------*/
+
+/*----------- aqui segunda seccion auto ------------*/
+#slider-auto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(140deg, #707d76, #8dcaa9);
+}
+.conteiner1{
+    position:relative;
+    width:960px;
+    height: 540px;
+}
+        /* --- img ---*/
+.conteiner1 .img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.conteiner1 .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    border-radius: 20px;
+    transition: all .7s;
+}
+/* --- Efecto - img ---*/
+
+#siete:checked ~ .img7 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#ocho:checked ~ .img7 img,
+#ocho:checked ~ .img8 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#nueve:checked ~ .img7 img,
+#nueve:checked ~ .img8 img,
+#nueve:checked ~ .img9 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#diez:checked ~ .img7 img,
+#diez:checked ~ .img8 img,
+#diez:checked ~ .img9 img,
+#diez:checked ~ .img10 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#once:checked ~ .img7 img,
+#once:checked ~ .img8 img,
+#once:checked ~ .img9 img,
+#once:checked ~ .img10 img,
+#once:checked ~ .img11 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#doce:checked ~ .img7 img,
+#doce:checked ~ .img8 img,
+#doce:checked ~ .img9 img,
+#doce:checked ~ .img10 img,
+#doce:checked ~ .img11 img,
+#doce:checked ~ .img12 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+        /* --- Labels---*/
+        .conteiner1 .sliders{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform:translateX(-50%);
+            z-index: 99;
+            display: flex;
+        }
+        .conteiner1 .sliders label{
+            width: 13px;
+            height: 13px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            margin: 0 3px;
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+        
+        #siete:checked ~ .sliders label.siete,
+        #ocho:checked ~ .sliders label.ocho,
+        #nueve:checked ~ .sliders label.nueve,
+        #diez:checked ~ .sliders label.diez,
+        #once:checked ~ .sliders label.once,
+        #doce:checked ~ .sliders label.doce{
+            width: 35px;
+            border-radius: 14px;
+            background: #fff ;
+        }
+        
+        .sliders label:hover{
+            background: #fff
+        }
+        
+        input[type="radio"]{
+            display: none;
+        }
+
+/*----------- aqui tercera seccion sillones ------------*/
+#slider-sillon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(140deg, #4bae77, #fff);
+}
+.conteiner2{
+    position: relative;
+    width:960px;
+    height: 540px;
+}
+        /* --- img ---*/
+.conteiner2 .img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.conteiner2 .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    border-radius: 20px;
+    transition: all .7s;
+}
+.img p{
+    text-transform: uppercase;
+    background: linear-gradient(140deg,#31dd8470, #a85798);
+    font-weight: 200;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+/* --- Efecto - img ---*/
+
+#trece:checked ~ .img13 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#catorce:checked ~ .img13 img,
+#catorce:checked ~ .img14 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#quince:checked ~ .img13 img,
+#quince:checked ~ .img14 img,
+#quince:checked ~ .img15 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#dieciseis:checked ~ .img13 img,
+#dieciseis:checked ~ .img14 img,
+#dieciseis:checked ~ .img15 img,
+#dieciseis:checked ~ .img16 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#diecisiete:checked ~ .img13 img,
+#diecisiete:checked ~ .img14 img,
+#diecisiete:checked ~ .img15 img,
+#diecisiete:checked ~ .img16 img,
+#diecisiete:checked ~ .img17 img{
+    clip-path: circle(150% at 0% 100%);
+}
+
+#dieciocho:checked ~ .img13 img,
+#dieciocho:checked ~ .img14 img,
+#dieciocho:checked ~ .img15 img,
+#dieciocho:checked ~ .img16 img,
+#dieciocho:checked ~ .img17 img,
+#dieciocho:checked ~ .img18 img{
+    clip-path: circle(150% at 0% 100%);
+}
+        /* --- Labels---*/
+.conteiner2 .sliders{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform:translateX(-50%);
+    z-index: 99;
+    display: flex;
+}
+.conteiner2 .sliders label{
+    width: 13px;
+    height: 13px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#trece:checked ~ .sliders label.trece,
+#catorce:checked ~ .sliders label.catorce,
+#quince:checked ~ .sliders label.quince,
+#dieciseis:checked ~ .sliders label.dieciseis,
+#diecisiete:checked ~ .sliders label.diecisiete,
+#dieciocho:checked ~ .sliders label.dieciocho{
+    width: 35px;
+    border-radius: 14px;
+    background: #fff ;
+}
+
+.sliders label:hover{
+    background: #fff
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+
+
+
+/* ------------ ASTA AQUÍ GALERIA---------------------*/
+
+/* ------------ REDES ---------------------*/
+#ubication{
+    background-color:#707d76;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.taller{
+    background-color:#707d76;
+    padding: 20px;
+
+}
+.as{
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+.donde{
+    color: #fff;
+}
+
+/* ------------ RESPONSIVE ---------------------*/
+@media(max-width: 768px){
+    /*HEADER*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#4D4D5C;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+    /*PERSONAS*/
+    #personas{
+        flex-direction: column;
+    }
+    /*ICONOS*/
+    .contenido-iconos{
+        flex-direction: column;
+    }
+    .contenido-iconos div{
+        border: none;
+    }
+    /*FORMULARIO*/
+    .datos-form{
+        flex-direction:column;
+    }
+    /*Nosotros*/
+    #nosotros .texto,
+    #nosotros1 .texto,
+    #nosotros2 .texto{
+        font-size: 15px;
+    }
+
+    #nosotros h2,
+    #nosotros1 h2,
+    #nosotros2 h2{
+        font-size: 20px;
+    }
+    /*GALERIA*/
+    .conteiner{
+        width: 80%;
+    }
+    .conteiner1{
+        width: 80%;
+    }
+    .conteiner2{
+        width: 80%;
+    }
+    .taller{
+        flex-direction: column;
+    }
+    .as{
+        width: 90%;
+    }
+    /*footer*/
+    footer{
+        font-size: 13px;
+    }
+    
+}
